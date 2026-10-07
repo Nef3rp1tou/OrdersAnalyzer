@@ -8,6 +8,6 @@ public sealed record OrderItem
 
     public decimal Subtotal => Price * Quantity;
 
-    /// <summary>Items without a name, with quantity ≤ 0 or a negative price are ignored everywhere.</summary>
+    ///Items without a name, with quantity ≤ 0 or a negative price are ignored everywhere.
     public bool IsValid => !string.IsNullOrWhiteSpace(Product) && Quantity > 0 && Price >= 0;
 }
